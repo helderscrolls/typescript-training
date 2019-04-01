@@ -69,16 +69,6 @@ describe('class', () => {
         this.instrument = instrument;
       }
 
-      play() {
-        return `I'm playing ${this.instrument}`
-      }
-
-      static playAll() {
-        for (let i = 0; i < Musician.instances.length; i++) {
-          console.log(Musician.instances[i].play())
-        }
-      }
-
       static create(instrument: string): Musician {
         const musician = new Musician(instrument);
         Musician.instances.push(musician);
